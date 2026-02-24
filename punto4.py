@@ -1,30 +1,56 @@
 import random
 
-cantidad = int(input("¿Cuántos números quieres? "))
-rango= int(input("digite el rango que quieras para que salgan los numeros aleatorios, del uno al: "))
-lista = []
+while True:
+    try:
+        quantity = int(input("¿How many numbers do you want? "))
+        if quantity <= 0:
+            print("Please enter a valid integer greater than 0.")
+        else:
+            break
+    except ValueError:
+        print("Please enter a valid integer.")
 
-for i in range(cantidad):
-    num = random.randint(1, rango)
-    lista.append(num)
+while True:
+    try:
+        range_numbers1 = int(input("¿What is the range of the numbers? (from ... to...): "))
+        break
+    except ValueError:
+        print("Please enter a valid integer.")
 
-print("esta es la lista de los numeros enteros:", lista)
+while True:
+    try:
+        range_numbers = int(input(f"¿What is the range of the numbers? (from {range_numbers1} to...): "))
+        if range_numbers < range_numbers1:
+            print("The second number must be greater than or equal to the first number.")
+        else:
+            break
+    except ValueError:
+        print("Please enter a valid integer.")
 
-def mayor_suma_consecutivos(lista):
-    sumas=[]
-    # Inicializamos la variable con un valor muy pequeño
-    # Para que cualquier suma sea mayor
-    max_suma = float('-inf')
-    
-    # Recorremos la lista desde el primer elemento hasta el penúltimo
-    for i in range(len(lista) - 1):
-        suma = lista[i] + lista[i + 1]  # sumamos elementos consecutivos
-        sumas.append(suma) 
-        if suma > max_suma:             # verificamos si es la mayor suma encontrada
-            max_suma = suma             # si lo es, actualizamos max_suma
-    return max_suma, sumas
+list_numbers = []
 
-resultado, lista_sumas = mayor_suma_consecutivos(lista)
-print("Esta es la nueva lista sumando los elementos consecutivos", lista_sumas)
-# Llamamos a la función y mostramos el resultado
-print("La mayor suma de elementos consecutivos es:", resultado)
+for i in range(quantity):
+    num = random.randint(range_numbers1, range_numbers)
+    list_numbers.append(num)
+
+print(f"This is the list of integers: {list_numbers}")
+
+def highest_consecutive_sum(list_numbers):
+    sums=[]
+    # The variable is declared with a very small value using '-inf' to ensure that any sum found will be larger.
+    max_sum = float('-inf') 
+    # The list is traversed from the first element to the last.
+    for i in range(len(list_numbers) - 1):
+        # The consecutive elements are added together.
+        sum = list_numbers[i] + list_numbers[i + 1]  
+        sums.append(sum)
+        # It is checked if it is the largest sum found. 
+        if sum > max_sum:
+            # And if it's the largest sum found, we update max_sum.  
+            max_sum = sum  
+    return max_sum, sums
+
+result, list_sums = highest_consecutive_sum(list_numbers)
+print(f"This is the list of consecutive sums: {list_sums}")
+# It is used to call the function and display the result.
+print(f"The largest sum of consecutive elements is: {result}") 
