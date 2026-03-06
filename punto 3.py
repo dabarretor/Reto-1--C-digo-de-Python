@@ -50,3 +50,6 @@ for num in list_numbers:
         # Adds the generated number to the list of prime numbers.
         prime_numbers.append(num) 
 print(f"This is the list of prime numbers, taking the previous list as reference: {prime_numbers}")
+
+# Return to the main README: 
+# https://github.com/dabarretor/Reto-1-Codigo-de-Python
