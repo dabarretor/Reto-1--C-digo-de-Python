@@ -1,5 +1,5 @@
 # Reto-1-Código-de-Python
-1. Crear una función que realice operaciones básicas (suma, resta, multiplicación, división) entre dos números, según la elección del usuario, la forma de entrada de la función será los dos operandos y el caracter usado para la operación. entrada: (1,2,"+"), salida (3).
+1. Crear una función que realice operaciones básicas (suma, resta, multiplicación, división) entre dos números, según la elección del usuario, la forma de entrada de la función será los dos operandos y el caracter usado para la operación. entrada: (1,2,"+"), salida (3). 
 
 2. Realice una función que permita validar si una palabra es un palíndromo. Condición: No se vale hacer slicing para invertir la palabra y verificar que sea igual a la original.
 
@@ -9,4 +9,14 @@
 
 5. Escribir una función que reciba una lista de string y retorne unicamente aquellos elementos que tengan los mismos caracteres. e.g. entrada: ["amor", "roma", "perro"], salida ["amor", "roma"]
 
-Cada codigo esta organizado y estara su explicación ahi mismo.
+Cada codigo esta organizado con su explicación en estos links:
+
+- [punto_1](reto1/punto1)
+
+- [punto_2](reto1/punto2)
+
+- [punto_3](reto1/punto3)
+
+- [punto_4](reto1/punto4)
+
+- [punto_5](reto1/punto5)
