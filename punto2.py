@@ -25,3 +25,7 @@ if is_palindrome(word):
     print(f"The word is a palindrome: {word}")
 else:
     print(f"The word is not a palindrome: {word}")
+
+# Return to the main README: 
+# https://github.com/dabarretor/Reto-1-Codigo-de-Python
+
