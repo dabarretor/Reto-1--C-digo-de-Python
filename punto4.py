@@ -12,16 +12,19 @@ while True:
 
 while True:
     try:
-        range_numbers1 = int(input("¿What is the range of the numbers? (from ... to...): "))
+        range_numbers1 = int(input("¿What is the range of the numbers? "
+        "(from ... to...): "))
         break
     except ValueError:
         print("Please enter a valid integer.")
 
 while True:
     try:
-        range_numbers = int(input(f"¿What is the range of the numbers? (from {range_numbers1} to...): "))
+        range_numbers = int(input(f"¿What is the range of the numbers?"
+                                 f" (from {range_numbers1} to...): "))
         if range_numbers < range_numbers1:
-            print("The second number must be greater than or equal to the first number.")
+            print("The second number must be greater than or equal to the "
+                  "first number.")
         else:
             break
     except ValueError:
@@ -37,7 +40,8 @@ print(f"This is the list of integers: {list_numbers}")
 
 def highest_consecutive_sum(list_numbers):
     sums=[]
-    # The variable is declared with a very small value using '-inf' to ensure that any sum found will be larger.
+    # The variable is declared with a very small value using '-inf'
+    # to ensure that any sum found will be larger.
     max_sum = float('-inf') 
     # The list is traversed from the first element to the last.
     for i in range(len(list_numbers) - 1):
@@ -54,6 +58,5 @@ result, list_sums = highest_consecutive_sum(list_numbers)
 print(f"This is the list of consecutive sums: {list_sums}")
 # It is used to call the function and display the result.
 print(f"The largest sum of consecutive elements is: {result}") 
-
 # Return to the main README: 
 # https://github.com/dabarretor/Reto-1-Codigo-de-Python
